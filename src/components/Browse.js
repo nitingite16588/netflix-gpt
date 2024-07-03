@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react"
 
 export const Browse = () => {
-  return (
-    <div>Browse</div>
-  )
+  return <div>Browse</div>
 }

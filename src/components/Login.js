@@ -1,12 +1,12 @@
-import { useState } from "react";
-import Header from "./Header";
+import { useState } from "react"
+import Header from "./Header"
 
 const Login = () => {
-  const [isSignInForm, setIsSignInForm] = useState(true);
+  const [isSignInForm, setIsSignInForm] = useState(true)
 
   const toggleForm = () => {
-    setIsSignInForm(!isSignInForm);
-  };
+    setIsSignInForm(!isSignInForm)
+  }
   return (
     <>
       <div className="absolute">
@@ -21,6 +21,14 @@ const Login = () => {
         <h1 className="py-4 font-bold text-3xl">
           {isSignInForm ? "Sign In" : "Sign Up"}
         </h1>
+
+        {!isSignInForm && (
+          <input
+            type="text"
+            placeholder="Full Name"
+            className="p-3 m-2 w-full bg-gray-700"
+          ></input>
+        )}
         <input
           type="text"
           placeholder="Email Address"
@@ -32,7 +40,7 @@ const Login = () => {
           className="p-3  m-2 w-full  bg-gray-700"
         ></input>
         <button className="p-3 m-2  bg-red-700 w-full rounded-md">
-        {isSignInForm ? "Sign In" : "Sign Up"}
+          {isSignInForm ? "Sign In" : "Sign Up"}
         </button>
         <p className="cursor-pointer" onClick={toggleForm}>
           {isSignInForm
@@ -41,7 +49,7 @@ const Login = () => {
         </p>
       </form>
     </>
-  );
-};
+  )
+}
 
-export default Login;
+export default Login
